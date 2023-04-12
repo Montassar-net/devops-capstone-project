@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: python:3.11-slim
+    container: python:3.9-slim
 
     services:
       postgres:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -mH  pip install --upgrade pip wheel
+          python -m pip install --upgrade pip wheel
           pip install -r requirements.txt
 
       - name: Lint with flake8
