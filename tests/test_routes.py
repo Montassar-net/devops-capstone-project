@@ -187,6 +187,7 @@ class TestAccountService(TestCase):
             'Content-Security-Policy': 'default-src \'self\'; object-src \'none\'',
             'Referrer-Policy': 'strict-origin-when-cross-origin'
         }
+
         for key, value in headers.items():
             self.assertEqual(response.headers.get(key), value)
 
